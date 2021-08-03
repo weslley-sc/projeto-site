@@ -5,6 +5,8 @@
 
 body {
     background-color: rgb(204, 157, 240);
+    display:flex;
+    flex-wrap: wrap;
 }
 
 main {
@@ -15,6 +17,17 @@ main {
     margin: auto;
     padding: 10px;
     box-shadow: 3px 3px 5px rgba(rgb(0, 0, 0), green, blue, alpha);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+img.logo {
+    height: 50px;
+
 }
 
 h1 {
@@ -45,4 +58,26 @@ a {
 a:hover {
     text-decoration: underline;
     color: rgb(26, 26, 255);
+}
+
+@media screen and (max-width: 768px) {
+
+    img.logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img.logo {
+        display: none;
+    }
+    
+    main {
+        justify-content: center;
+        width: 100%;
+    }
+
+    iframe {
+        width: auto;
+    }
 }
